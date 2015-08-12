@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CNNMoney Mobile</title>
+<style> @import "styles/common-min.css"; @import "styles/home-min.css"; @import "styles/fullarticle-min.css"; </style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="scripts/underscore-min.js"></script>
+<script src="scripts/backbone.js"></script>
+<!--<script src="scripts/backbone.localStorage.js"></script>-->
+
+
+<!-- templates -->
+<script type="text/template" id="headline-tmpl">
+<a href="<%= link %>"><%= title %></a>
+</script>
+<script type="text/template" id="sections-tmpl">
+<ul id="homepage-container"></ul>
+<div id="news-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#">Business News</a></td>
+	</tr>
+</table>
+<ul id="news-container"></ul>
+</div>
+<div id="investing-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#">Investing</a></td>
+	</tr>
+</table>
+<ul id="markets-container"></ul>
+</div>
+<div id="economy-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#">Economy</a></td>
+	</tr>
+</table>
+<ul id="economy-container"></ul>
+</div>
+<div id="tech-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#" class="header">Tech</a></td>
+	</tr>
+</table>
+<ul id="technology-container"></ul>
+</div>
+<div id="pf-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#" class="header">Personal Finance</a></td>
+	</tr>
+</table>
+<ul id="pf-container"></ul>
+</div>
+<div id="smallbusiness-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#" class="header">Small Business</a></td>
+	</tr>
+</table>
+<ul id="smbusiness-container"></ul>
+</div>
+<div id="money-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#" class="header">Money</a></td>
+	</tr>
+</table>
+<ul id="moneymag-container"></ul>
+</div>
+<div id="fortune-header" class="section">
+<table class="section_header">
+	<tr>
+		<td><a href="#" class="header">Fortune</a></td>
+	</tr>
+</table>
+<ul id="fortune-container"></ul>
+</div>
+<table class="section_header">
+		<tr>
+			<td><a href="#" class="settings">Settings</a></td>
+		</tr>
+</table>
+</script>
+<script type="text/template" id="article-tmpl">
+<div class="contentNewsArticle">
+<a href="#" class="back">Back</a>
+<article>
+<h1 class="headlineNewsArticle"><%= headline %></h1>
+<img src="<%= imgurl %>" />
+<%= text %>
+</article>
+</div>
+</script>
+<script type="text/template" id="settings-tmpl">
+<div id="settings">
+<a href="#" class="back">Back</a>
+<h1>Story Preloader</h1>
+<form>
+<label>Daily Time</label><input id="time" type="time" value="07:00:00">
+
+<h2>Sections to Preload</h2>
+<input type="checkbox" name="homepage" id="homepage" value="homepage"><label for="homepage">Latest News</label> 
+<br>
+<input type="checkbox" name="news" id="news" value="news"><label for="news">Business News</label> 
+<br>
+<input type="checkbox" name="markets" id="markets" value="markets"><label for="markets">Investing</label> 
+<br>
+<input type="checkbox" name="economy" id="economy" value="economy"><label for="economy">Economy</label> 
+<br>
+<input type="checkbox" name="technology" id="technology" value="technology"><label for="technology">Tech</label> 
+<br>
+<input type="checkbox" name="pf" id="pf" value="pf"><label for="pf">Personal Finance</label> 
+<br>
+<input type="checkbox" name="smbusiness" id="smbusiness" value="smbusiness"><label for="smbusiness">Small Business</label> 
+<br>
+<input type="checkbox" name="fortune" id="fortune" value="fortune"><label for="fortune">Fortune</label> 
+<br>
+<input type="checkbox" name="moneymag"  id="moneymag" value="moneymag"><label for="moneymag">Money</label> 
+<br>
+<button id="submit-preload">Submit</button>
+</form>
+</div>
+</script>
+<!-- end templates -->
+
+
+</head>
+
+<body>
+<div class="section_">
+	<div class="module_" id="xml_68c4a9ce-1474-4b75-b511-4e1efa59982a">
+		<center>
+			<div id="topLogo" style="background-image: url('styles/gradient.png'); height: 83px; overflow: hidden;"><img usemap="#news" height="83px" src="styles/logo.png"/>
+				<map name="news">
+					<area shape="rect" coords="7,8,154,36" href="/primary/news"/>
+					<area shape="rect" coords="278,11,303,35" href="/primary/search"/>
+					<area shape="rect" coords="10,45,96,85" href="/primary/news"/>
+					<area shape="rect" coords="117,45,201,85" href="/primary/markets"/>
+					<area shape="rect" coords="224,45,310,85" href="/primary/watchlist"/>
+				</map>
+				</div>
+		</center>
+	</div>
+</div>
+<div class="section_">
+	<div class="module_" id="service_5de55136-b166-4dc3-bb60-964db5922c96">
+		<table class="dow_header">
+			<tr>
+				<td class="dow_padding_left"><span class="dow_text">DOW</span></td><td class="dow_padding"><div class="dow_down"></div></td><td class="dow_padding"><span class="dow_percent"> -0.46% </span></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="page"></div>
+
+<script src="scripts/mobile.js"></script>
+</body>
+</html>

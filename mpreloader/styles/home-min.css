@@ -1,0 +1,97 @@
+#page ul { display: block; }
+
+.breakingnews {
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/breaking.news.png") no-repeat;
+	margin:5px;
+	height:63px;
+	width:300px;
+	padding-top:5px;
+	clear:both;
+}
+
+.bn_title {
+	color:white;
+	font-family:Arial, sans-serif;
+	font-size:10pt;
+	font-weight:bold;
+	padding-left:5px;
+	margin-top:5px;
+}
+
+.bn_desc {
+	font-size:9pt;
+	color:white;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.dow_padding {
+	display:inline;
+}
+
+.dow_up {
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/dow_up.png") no-repeat;
+	background-position:center center;
+	width:12px;
+	height:14px;
+	float:left;
+}
+
+.dow_down {
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/dow_down.png") no-repeat;
+	background-position:center center;
+	width:12px;
+	height:14px;
+	float:left;
+}
+
+.dow_text {
+	float:left;
+	padding-right:10px;
+}
+
+.dow_percent {
+	padding-left:4px;
+	float:left;
+}
+
+.dow_padding_left {
+	display:inline;
+}
+
+table.dow_header, .section_header {
+	padding-left:10px;
+	color:white;
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/blue.png");
+	font-weight:bold;
+	font-size:14px;
+	font-family:arial;
+	height:24px;
+	padding-top:10px;
+	text-align:left;
+	margin-bottom:1px;
+}
+.section_header a {padding-left:0px;color:#FFF;font:bold 14px Arial;}
+table.section_header {padding-top:3px;padding-bottom:0px;margin:0px;height:38px;margin-bottom:1px;}
+.section ul, ul#homepage-container {padding:0px 10px;margin:0px;width:100%;height:auto;}
+.section li, #homepage-container li {height:31px;list-style-type:none;border-bottom:1px solid #d9d9d9;padding-top:10px;width:100%}
+.section li a, #homepage-container a {display:inline;
+	background-color:#FFF;
+	text-decoration:none;
+	line-height:18px;
+	color:#094871;
+	font-weight:bold;
+	font-size:15px;
+	font-family:arial;}
+	
+.section li.icon_video {
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/video.png") no-repeat;
+	background-position:right center;
+	width:98%;height:31px;float:none;
+}
+
+.section li.icon_story {
+	background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/story.png") no-repeat;
+	background-position:right center;
+	width:98%;height:31px;float:none;
+}
